@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "NuNederlands",
+  "description": "NuNederlands auto answer",
+  "version": "1.0",
+
+  "permissions": [
+    "http://scormplayer.cl7.noordhoff.nl/",
+    "http://nunederlands.online.noordhoff.nl/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://scormplayer.cl7.noordhoff.nl/*", "http://nunederlands.online.noordhoff.nl/*"],
+      "js": ["inject.js"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["script.js"]
+}
