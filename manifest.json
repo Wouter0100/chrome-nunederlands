@@ -1,15 +1,20 @@
 {
-   "content_scripts": [ {
-      "all_frames": true,
-      "js": [ "inject.js" ],
-      "matches": [ "http://scormplayer.cl7.noordhoff.nl/*", "http://nunederlands.online.noordhoff.nl/*" ]
-   } ],
-   "description": "NuNederlands auto answer",
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArgNjqY4hJ1BWEHVPNks0AlREs91cavY45r9Sa3yAxBBucMSGtVu2BMBde5IL94OpE71br1hduPWMRpGgnCx71CIqawfL77SpfJUJsFf0DoSv0YYjYMKOfDvrLpvzGfYq/q4+xo6Zl1ItdWkUqPMl8wmOBq8eWy4Y7q7ALRE/ks/CnU8nd6seuyDhoNYKitlPJ/N5MxfxKLnXPcWuJ/IxgThPoT4EnDKJNQtm8ZiwraGYaPKDkRJGy77iACACQz04ovH1GMraIUhRA6LdT8LNdSgUMtx5+dUVOGvIh3spLD9yIBRgKQnQQGtohYcmnaDTO8ToRO6w7vEX6LN0C1emeQIDAQAB",
-   "manifest_version": 2,
-   "name": "NuNederlands",
-   "permissions": [ "http://scormplayer.cl7.noordhoff.nl/", "http://nunederlands.online.noordhoff.nl/" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0",
-   "web_accessible_resources": [ "script.js" ]
+  "manifest_version": 2,
+
+  "name": "NuNederlands",
+  "description": "NuNederlands auto answer",
+  "version": "1.0",
+
+  "permissions": [
+    "http://scormplayer.cl7.noordhoff.nl/",
+    "http://nunederlands.online.noordhoff.nl/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://scormplayer.cl7.noordhoff.nl/*", "http://nunederlands.online.noordhoff.nl/*"],
+      "js": ["inject.js"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["script.js"]
 }
