@@ -4,7 +4,10 @@ var bck = chrome.extension.getBackgroundPage();
 chrome.webRequest.onCompleted.addListener(function(vars){
 	bck.console.log(vars.url);
 	$.get(vars.url + '?is_just_testing_yolo', function(data) {
-		content = $.xml2json($('<div />').html(data).html());
+		data = $('<div />').html(data.replace(/\s*\(.*?\)\s*/g, '').replace(/\s*\&.*?\;\s*/g, '')).html();
+		bck.console.log(data);
+		content = $.xml2json(data);
+		bck.console.log(content);
 	}, 'html');
 }, {
     urls: ["http://scormplayer.cl7.noordhoff.nl/content/*/*/extract/*/nl/xml/data*.xml"]

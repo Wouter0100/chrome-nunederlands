@@ -3,7 +3,7 @@
 
 	"name": "NuNederlands",
 	"description": "NuNederlands auto answer",
-	"version": "2.1",
+	"version": "2.2",
 
 	"permissions": [
 		"http://scormplayer.cl7.noordhoff.nl/*", 
