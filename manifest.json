@@ -1,20 +1,40 @@
 {
-  "manifest_version": 2,
+	"manifest_version": 2,
 
-  "name": "NuNederlands",
-  "description": "NuNederlands auto answer",
-  "version": "1.0",
+	"name": "NuNederlands",
+	"description": "NuNederlands auto answer",
+	"version": "2.1",
 
-  "permissions": [
-    "http://scormplayer.cl7.noordhoff.nl/",
-    "http://nunederlands.online.noordhoff.nl/"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["http://scormplayer.cl7.noordhoff.nl/*", "http://nunederlands.online.noordhoff.nl/*"],
-      "js": ["inject.js"],
-      "all_frames": true
-    }
-  ],
-  "web_accessible_resources": ["script.js"]
+	"permissions": [
+		"http://scormplayer.cl7.noordhoff.nl/*", 
+		"http://nunederlands.online.noordhoff.nl/*",
+		"webRequest"
+	],
+
+	"background": {
+		"scripts": [ 
+			"jquery.js",
+			"xml_to_json.js",
+			"detect.js" 
+		]
+	},
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "NuNederlands Woordenschat zoeker",
+		"default_popup": "popup.html"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"http://scormplayer.cl7.noordhoff.nl/*", 
+				"http://nunederlands.online.noordhoff.nl/*"
+			],
+			"js": [ 
+				"script.js"
+			],
+			"all_frames": true
+		}
+    ]
 }
