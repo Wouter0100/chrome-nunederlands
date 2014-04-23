@@ -32,9 +32,13 @@
 				"http://nunederlands.online.noordhoff.nl/*"
 			],
 			"js": [ 
-				"script.js"
+				"inject.js"
 			],
 			"all_frames": true
 		}
-    ]
+  	],
+
+	"web_accessible_resources": [
+		"script.js"
+	]
 }

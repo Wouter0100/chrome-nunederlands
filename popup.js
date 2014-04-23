@@ -14,7 +14,7 @@ chrome.runtime.sendMessage({ method: 'getContent' }, function(content) {
 });
 
 $(function(){
-	$('#inputField').keyup(function(event) {
+	$('#inputField').focus().keyup(function(event) {
 		var found = 0;
 		
 		if ($('#inputField').val() != '') {
