@@ -6,7 +6,7 @@
 	"version": "2.5",
 
 	"permissions": [
-		"http://scormplayer.cl7.noordhoff.nl/*", 
+		"http://player.online.noordhoff.nl/*", 
 		"http://nunederlands.online.noordhoff.nl/*",
 		"webRequest"
 	],
@@ -28,7 +28,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"http://scormplayer.cl7.noordhoff.nl/*", 
+				"http://player.online.noordhoff.nl/*", 
 				"http://nunederlands.online.noordhoff.nl/*"
 			],
 			"js": [ 
